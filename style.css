@@ -1,0 +1,160 @@
+/* General Page Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Canvas Styling */
+canvas {
+    display: block;
+}
+
+/* Centered Contact Section */
+.contact-section {
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/* Header */
+h1 {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Navigation Links */
+.nav-links {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+.nav-links p {
+    display: inline;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: white;
+    margin: 0;
+}
+
+.highlight-link {
+    color: #3336ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.highlight-link:hover {
+    text-decoration: underline;
+}
+
+/* Container for Project Gallery */
+.project-gallery {
+    display: flex;
+    justify-content:space-around; /* Space items evenly */
+    flex-wrap: nowrap; /* Prevent wrapping to new lines */
+    gap: 30px; /* Space between each project */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the gallery */
+}
+
+/* Individual Project Item */
+.project-item {
+    position: relative;
+    width: 30%; /* Each item takes about one-third of the row */
+    height: 6cm; /* Set a consistent height */
+    background-color: #333; /* Background color for visibility */
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Image Styling */
+.project-item img {
+    width: 100%; /* Cover the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+/* Overlay for Project Details on Hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Text Styling in Overlay */
+.overlay h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.overlay p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+/* Link Styling */
+.overlay a {
+    color: #fff;
+    margin-top: 5px;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.overlay a:hover {
+    color: #0800ff; /* Highlight color on hover */
+}
+
+
+/* Button Styling for View and Download Links */
+.view-link, .download-link {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
